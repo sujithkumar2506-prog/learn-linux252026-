@@ -5,7 +5,10 @@ jobs:
   exploregithub:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "This is the first message in logs"
-      - run: echo "THis is second message in logs"
+      - name: First step
+        run: echo "This is the first message in logs"
+      
+      - name: Second step
+        run: echo "THis is second message in logs"
       
       
