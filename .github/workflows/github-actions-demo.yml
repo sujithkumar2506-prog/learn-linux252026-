@@ -13,6 +13,15 @@ jobs:
 
       - name: Github runner os
         run: echo "THis job is running on env- ${{runner.environment}} and Os- ${{runner.os}}, name- ${{runner.name}}"
+
+      - name: Check out repository code
+        uses: actions/checkout@v5
+      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - run: echo "🍏 This job's status is ${{ job.status }}."
       
       - name: Second step
         run: echo "THis is second message in logs"
