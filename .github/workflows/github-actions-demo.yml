@@ -1,7 +1,7 @@
 name: GITHUB Actions Exercise
 run-name: ${{GITHUB.actor}} is testing our branch
 on: 
-  workflow_dispatch:
+  workflow_call:
 jobs:
   exploregithub:
     runs-on: ubuntu-latest
