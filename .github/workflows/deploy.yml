@@ -1,0 +1,14 @@
+name: Deployment
+on: 
+  workflow_call:
+
+jobs:
+  deploy-app:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Run deployment
+        run: echo "Deployment is done"
